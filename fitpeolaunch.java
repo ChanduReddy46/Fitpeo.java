@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -17,13 +18,13 @@ public class fitpeolaunch {
 	
 	@BeforeTest
 	public void before() {
-		System.setProperty("webdriver.chrome.driver", "./chromedriverlaunch/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./chromebrowser2/chromedriver.exe");
 		driver= new ChromeDriver();
 		driver.get(applicationurladdress);
 		driver.manage().window().maximize();
 		
 	}
-	//@AfterTest
+	@AfterTest
 	public void after() {
 		driver.close();
 	}
